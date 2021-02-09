@@ -14,7 +14,7 @@ from datetime import datetime
 # Adding a datetime and a timedelta will result in the datetime offset by the timedelta.
 #
 # Official Documentation: https://docs.python.org/3/library/datetime.html#datetime.timedelta
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 
 population: int = int(input("Population: "))
@@ -27,6 +27,7 @@ total_doses_administered: float = ((2 * population) * target_percentage_float)
 doses: float = total_doses_administered - doses_administered
 left_to_be_cured: int = round(doses / doses_per_day)
 left_to_be_cured_timedelta: timedelta = timedelta(left_to_be_cured)
+
 today: datetime = datetime.today()
 future: datetime = today + (left_to_be_cured_timedelta)
 days_str: str = str(left_to_be_cured_timedelta)
