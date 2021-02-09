@@ -20,17 +20,19 @@ from datetime import timedelta
 population:int=int(input("Population: "))
 doses_administered:int=int(input("Doses administered: "))
 doses_per_day:int=int(input("Doses per day: "))
-target_percentage:int=int(input("Target percent vaccinated: "))
+target_percentage_str:str=(input("Target percent vaccinated: "))
+target_percentage_float: float = float(target_percentage_str)
 
-left_to_be_cured: float = population-((0.5)doses_administered)
+left_to_be_cured=round(float((population)-(0.5*doses_administered)))
+print(left_to_be_cured)
 
-days= ((2*(population)/doses_per_day)-(doses_administered/doses_per_day)-((50*(target_percentage))/((population)(doses_per_day))))
-print(days)
+target_percent_over_population= round(float((100*target_percentage_float)/population))
+print(target_percent_over_population)
 
+days: int = (round(float(2.0*(left_to_be_cured-target_percent_over_population))/doses_per_day)
 
+days_converted: timedelta = timedelta(days)
 today: datetime = datetime.today()
-future: datetime = today + days
-print(future.strftime("%B %d, %Y"))
-
-
-
+future: datetime = today + days_converted
+days_str: str = str(days)
+print("we will reach " + target_percentage_str + "% vaccination in " + days_str + " days which falls on" + future.strftime("%B %d, %Y") +".")
