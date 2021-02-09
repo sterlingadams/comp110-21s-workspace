@@ -3,7 +3,7 @@
 __author__ = "730397626"
 
 
-integer: int = int (input("Input an integer. "))
+integer: int = int(input("Input an integer. "))
 
 if integer % 2 == 0 and integer % 7 == 0:
     print("TAR HEELS")
