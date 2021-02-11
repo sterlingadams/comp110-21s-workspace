@@ -1,6 +1,6 @@
 """Tar Heels exercise redux as a structured program."""
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730397626"
 
 
 def main() -> None:
@@ -14,12 +14,12 @@ def tar_heels(integer: int) -> str:
         x: str = str("TAR HEELS")
     else:
         if integer % 2 == 0:
-            x: str = str("TAR")
+            x: str("TAR")
         else:
             if integer % 7 == 0:
-                x: str = str("HEELS")
+                x: str("HEELS")
             else:
-                x: str = str("CAROLINA")
+                x: str("CAROLINA")
     return x
 
 
