@@ -1,6 +1,6 @@
 """An idiomatic, Python program."""
 
- def main() -> None:
+def main() -> None:
     """Entrypoint of program."""
     x: int = 2
     print(g(f(x)))
