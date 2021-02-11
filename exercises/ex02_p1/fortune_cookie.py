@@ -17,15 +17,20 @@ def fortune_cookie() -> str:
     number = (randint(1, 4))
     if number <= 2:
         if number != 1:
-            x: str = str("Tomorrow will be your lucky day!")
+            w: str = str("Tomorrow will be your lucky day!")
+            return w
         else:
-            x: str("If you can dream it, you can beccome it!")
+            x: str = str("If you can dream it, you can beccome it!")
+            return x
     else: 
         if number == 3:
-            x: str("Happiness ahead!")
+            y: str = str("Happiness ahead!")
+            return y
         else:
-            x: str("Be the change you want to see in the world!")
-    return x
+            z: str = str("Be the change you want to see in the world!")
+            return z
+    
+    
 # Python Idiom for "starting" the program when run as a module.
 # The special dunder variable __name__ will be "__main__" when run as module. 
 if __name__ == "__main__":

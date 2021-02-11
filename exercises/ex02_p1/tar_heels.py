@@ -10,17 +10,21 @@ def main() -> None:
 
 
 def tar_heels(integer: int) -> str:
+    """The Carolina Tar Heels portion of the program."""
     if integer % 2 == 0 and integer % 7 == 0:
-        x: str = str("TAR HEELS")
+        w: str = str("TAR HEELS")
+        return w
     else:
         if integer % 2 == 0:
-            x: str("TAR")
+            x: str = str("TAR")
+            return x
         else:
             if integer % 7 == 0:
-                x: str("HEELS")
+                y: str = str("HEELS")
+                return y
             else:
-                x: str("CAROLINA")
-    return x
+                z: str = str("CAROLINA")
+                return z
 
 
 if __name__ == "__main__":
